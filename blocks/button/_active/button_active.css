@@ -1,0 +1,7 @@
+.popup__button.button_active {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    display: block;
+    cursor: pointer;
+  }
