@@ -1,6 +1,6 @@
-(function() {
-    'use strict'
-
+    import {cardList} from "./API";
+    import {api} from "../index";
+    
     class Popup {
         constructor(popupDom) {
             this.popupDom = popupDom;
@@ -25,9 +25,9 @@
             const element = document.createElement('div');
             element.classList.add('popup__content', 'popup__image');
 
-            const closeButton = document.createElement('img');
+            const closeButton = document.createElement('button');
             closeButton.classList.add('popup__close');
-            closeButton.setAttribute('src', './images/close.svg');
+            // closeButton.setAttribute('src', 'images/close.svg');
             element.appendChild(closeButton);
 
             const image = document.createElement('img');
@@ -44,9 +44,9 @@
             const element = document.createElement('div');
             element.classList.add('popup__content');
 
-            const closeButton = document.createElement('img');
+            const closeButton = document.createElement('button');
             closeButton.classList.add('popup__close');
-            closeButton.setAttribute('src', './images/close.svg');
+            // closeButton.setAttribute('src', 'images/close.svg');
             element.appendChild(closeButton);
 
             const header = document.createElement('h3');
@@ -245,8 +245,7 @@
     /* ПЕРЕМЕННЫЕ */
     
     const popupDom = document.querySelector('.popup');
-    const popup = new Popup(popupDom);
-    window.popup = popup;
+    export const popup = new Popup(popupDom);
 
     const addCardButton = document.querySelector('.user-info__button');
     const editProfileButton = document.querySelector('.user-info__edit-button');
@@ -258,5 +257,3 @@
     addCardButton.addEventListener('click', popup.open);
     editProfileButton.addEventListener('click', popup.open);
 
-
-})();
