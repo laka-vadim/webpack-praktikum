@@ -9,4 +9,3 @@ import "./pages/index.css";
 export const api = new Api(serverUrl, 'd50a38f5-6271-40df-87a0-d89f0934034b');
 api.loadUserProfile();
 api.loadCards();
-console.log('test');
